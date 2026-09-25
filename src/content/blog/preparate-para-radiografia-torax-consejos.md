@@ -3,12 +3,12 @@ title: "Prepárate para tu Radiografía de Tórax: Consejos Importantes"
 date: "2026-09-25"
 description: "Descubre cómo prepararte adecuadamente para una radiografía de tórax a domicilio. Sencillos pasos para garantizar una imagen clara y un diagnóstico preciso."
 author: "Radiografia Portatil Piura"
-coverImage: "/images/blog/preparacion-torax.jpg"
+coverImage: "/images/blog/preparacion-torax-flat-panel.jpg"
 ---
 
 Si tu médico ha solicitado una **radiografía de tórax**, es normal tener algunas dudas, especialmente si es la primera vez que te realizas este estudio a domicilio. La buena noticia es que es un procedimiento **rápido, completamente indoloro y muy seguro**.
 
-Para asegurar que nuestro equipo obtenga la imagen más nítida posible en el primer intento y el radiólogo pueda darte un diagnóstico certero, te dejamos algunos consejos prácticos sobre cómo prepararte antes de que llegue nuestro tecnólogo a tu hogar.
+Para asegurar que nuestro equipo obtenga la imagen más nítida posible en el primer intento y el radiólogo pueda darte un diagnóstico certero, te damos algunos consejos prácticos sobre cómo prepararte antes de que llegue nuestro técnico radiólogo a tu hogar.
 
 ## 1. Ropa cómoda y sin metales
 El metal bloquea los rayos X, apareciendo como manchas blancas brillantes en la imagen que pueden ocultar detalles importantes de tus pulmones o corazón.
@@ -20,10 +20,10 @@ El metal bloquea los rayos X, apareciendo como manchas blancas brillantes en la 
 A diferencia de los exámenes de sangre o ecografías abdominales, **no necesitas ir en ayunas** para una radiografía de tórax. Puedes comer, beber y tomar tus medicamentos habituales con total normalidad antes del examen.
 
 ## 3. Preparación para mujeres
-Si existe la posibilidad de que estés **embarazada**, es crucial que se lo informes a tu médico tratante y a nuestro tecnólogo antes de realizar el examen. Aunque la radiación es mínima, siempre se toman precauciones extremas (como delantales de plomo) para proteger al bebé, o se evalúan alternativas médicas.
+Si existe la posibilidad de que estés **embarazada**, es crucial que se lo informes a tu médico tratante y a nuestro técnico radiólogo antes de realizar el examen. Aunque la radiación es mínima, siempre se toman precauciones extremas (como delantales de plomo) para proteger al bebé, o se evalúan alternativas médicas.
 
 ## 4. El momento de la toma (La Respiración)
-Para obtener una imagen perfecta de tus pulmones, el tecnólogo te pedirá algo muy sencillo:
+Para obtener una imagen diagnóstica de tus pulmones, el técnico radiólogo te pedirá algo muy sencillo:
 * Tomar aire profundamente (inspirar).
 * **Aguantar la respiración** por 2 o 3 segundos mientras se toma la placa.
 Esto es vital porque al llenar los pulmones de aire se expanden, permitiendo visualizar mejor su interior y asegurando que la imagen no salga "movida".
