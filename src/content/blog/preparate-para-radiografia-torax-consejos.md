@@ -3,7 +3,7 @@ title: "Prepárate para tu Radiografía de Tórax: Consejos Importantes"
 date: "2026-09-25"
 description: "Descubre cómo prepararte adecuadamente para una radiografía de tórax a domicilio. Sencillos pasos para garantizar una imagen clara y un diagnóstico preciso."
 author: "Radiografia Portatil Piura"
-coverImage: "/images/blog/radiografia-portatil.jpg"
+coverImage: "/images/blog/preparacion-torax.jpg"
 ---
 
 Si tu médico ha solicitado una **radiografía de tórax**, es normal tener algunas dudas, especialmente si es la primera vez que te realizas este estudio a domicilio. La buena noticia es que es un procedimiento **rápido, completamente indoloro y muy seguro**.
