@@ -7,6 +7,11 @@ const nextConfig = {
         destination: '/', // Redirige a la página principal
         permanent: true, // Redirección 301 (buena para el SEO)
       },
+      {
+        source: '/blogg/radiograf%C3%ADa-en-casa-piura-rayos-x-sin-salir-de-casa-para-ti',
+        destination: '/domicilio',
+        permanent: true,
+      },
     ];
   },
 };
