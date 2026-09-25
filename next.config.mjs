@@ -22,6 +22,11 @@ const nextConfig = {
         destination: '/blog',
         permanent: true,
       },
+      {
+        source: '/blogg/que-beneficios-ofrece-la-radiologia-digital-a-domicilio',
+        destination: '/blog/beneficios-radiografia-domicilio-piura',
+        permanent: true,
+      },
     ];
   },
 };
