@@ -12,6 +12,11 @@ const nextConfig = {
         destination: '/domicilio',
         permanent: true,
       },
+      {
+        source: '/contactanos',
+        destination: '/contacto',
+        permanent: true,
+      },
     ];
   },
 };
