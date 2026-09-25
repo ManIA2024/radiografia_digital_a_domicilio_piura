@@ -27,6 +27,11 @@ const nextConfig = {
         destination: '/blog/beneficios-radiografia-domicilio-piura',
         permanent: true,
       },
+      {
+        source: '/blogg/preparate-para-tu-radiografia-de-torax-consejos-importantes',
+        destination: '/blog/preparate-para-radiografia-torax-consejos',
+        permanent: true,
+      },
     ];
   },
 };
