@@ -22,6 +22,9 @@ export const metadata = {
     locale: 'es_PE',
     type: 'website',
   },
+  verification: {
+    google: 'FflvA0qVOxaS4rGjAmsY5aaTqTHryqHnNvLsTd1Gx5U',
+  },
 };
 
 export default function RootLayout({ children }) {
