@@ -3,7 +3,7 @@ title: "La Importancia de la Radiografía de Tórax Portátil en Adultos Mayores
 date: "2026-09-25"
 description: "Conoce por qué la radiografía de tórax a domicilio es vital para el diagnóstico rápido de neumonías y afecciones cardíacas en pacientes encamados."
 author: "Radiografia Portatil Piura"
-coverImage: "/images/blog/radiografia-portatil.jpg"
+coverImage: "/images/blog/adultos-mayores.jpg"
 ---
 
 Las enfermedades respiratorias y cardíacas son una de las principales causas de preocupación en **adultos mayores, pacientes postrados o con enfermedades crónicas**. Ante síntomas como dificultad para respirar, tos persistente o fiebre, un diagnóstico temprano puede salvar vidas.

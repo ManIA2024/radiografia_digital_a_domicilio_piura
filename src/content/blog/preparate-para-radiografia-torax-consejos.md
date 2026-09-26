@@ -1,7 +1,7 @@
 ---
 title: "Prepárate para tu Radiografía de Tórax: Consejos Importantes"
 date: "2026-09-25"
-description: "Descubre cómo prepararte adecuadamente para una radiografía de tórax a domicilio. Sencillos pasos para garantizar una imagen clara y un diagnóstico preciso."
+description: "Aprende cómo prepararte de manera adecuada para una radiografía de tórax a domicilio. Pasos para garantizar una imagen adecuada y un diagnóstico preciso."
 author: "Radiografia Portatil Piura"
 coverImage: "/images/blog/preparacion-torax-flat-panel.jpg"
 ---

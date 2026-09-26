@@ -239,7 +239,7 @@ export default function DomicilioPage() {
                 </div>
                 <div className="bg-white p-6 rounded-xl shadow-sm">
                   <h3 className="text-lg font-bold text-[var(--color-primary)] mb-2">¿A qué zonas de Piura llegan con el servicio a domicilio?</h3>
-                  <p className="text-gray-700">Cubrimos todo Piura, Castilla, Catacaos y zonas aledañas. Contamos con atención rápida para urgencias médicas. Solo comunícate a nuestro WhatsApp para coordinar.</p>
+                  <p className="text-gray-700">Cubrimos todo Piura, Castilla, Catacaos y zonas aledañas segun disponibilidad. Contamos con atención rápida para urgencias médicas. Solo comunícate a nuestro WhatsApp para coordinar.</p>
                 </div>
               </div>
             </div>

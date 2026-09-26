@@ -4,7 +4,7 @@ import Footer from '../components/layout/Footer';
 import ContactWhatsapp from '../components/layout/ContactWhatsapp';
 
 export const metadata = {
-  title: 'Radiografías Digitales a Domicilio - Radiografía Portátil -Piura',
+  title: 'Radiografías Digitales a Domicilio - Radiografía Portátil Piura',
   description: 'Servicio de radiografía portátil a domicilio en Piura. Resultados de calidad diagnóstica en minutos sin mover al paciente.',
   openGraph: {
     title: 'Radiografías Digitales a Domicilio',

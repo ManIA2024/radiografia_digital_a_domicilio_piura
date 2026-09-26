@@ -1,7 +1,7 @@
 ---
 title: "Radiografías a Domicilio: Cuidado Esencial para Pacientes de la Tercera Edad"
 date: "2026-09-21"
-description: "Descubre cómo los servicios de radiología en casa mejoran la calidad de vida de nuestros adultos mayores al evitar traslados dolorosos y estresantes."
+description: "Entérate cómo los servicios de radiología en casa mejoran la calidad de vida de los adultos mayores al evitar traslados complicados."
 author: "Radiografia Portatil Piura"
 coverImage: "/images/blog/adultos-mayores.jpg"
 ---

@@ -59,7 +59,7 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-[var(--color-primary)] shrink-0 mt-0.5" />
                 <div>
                   <p className="text-gray-400 text-sm">Cobertura</p>
-                  <span className="text-white"> Piura,Castilla,Catacaos,etc...</span>
+                  <span className="text-white"> Piura, Veintiséis de Octubre, Castilla, Catacaos y zonas aledañas según disponibilidad.</span>
                 </div>
               </li>
             </ul>
@@ -72,8 +72,8 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Radiografia Digital Portatil. Todos los derechos reservados 2026.
           </p>
           <div className="flex gap-4">
-            <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Términos de Servicio</Link>
-            <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Política de Privacidad</Link>
+            <Link href="/terminos" className="text-gray-400 hover:text-white text-sm transition-colors">Términos de Servicio</Link>
+            <Link href="/privacidad" className="text-gray-400 hover:text-white text-sm transition-colors">Política de Privacidad</Link>
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@ title: "Beneficios de una Radiografía a Domicilio en Piura: Evita Traslados Dol
 date: "2026-09-25"
 description: "Descubre por qué cada vez más familias en Piura eligen los rayos X a domicilio para el cuidado de adultos mayores y pacientes con poca movilidad."
 author: "Radiografia Portatil Piura"
-coverImage: "/images/blog/radiografia-portatil.jpg"
+coverImage: "/images/blog/radiografia-domicilio-piura.jpg"
 ---
 
 Cuando un familiar adulto mayor sufre una caída, presenta fuertes dolores articulares o dificultades respiratorias, la idea de trasladarlo a un hospital en Piura puede ser abrumadora. Las largas colas, el tráfico y el riesgo de agravar su lesión al moverlo hacen que muchas familias busquen una solución más segura. 
