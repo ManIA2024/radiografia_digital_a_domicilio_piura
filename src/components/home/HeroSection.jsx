@@ -40,7 +40,7 @@ const slides = [
     tag: "Salud Ocupacional",
     title: "Radiografías In House para tus colaboradores",
     description: "Chequeos médicos para tus colaboradores sin que tengan que salir de la empresa. Hacemos las placas ahí mismo para despistaje ocupacional y lectura OIT.",
-    ctaWhatsApp: "Solicitar In-Company",
+    ctaWhatsApp: "Solicitar In House",
     linkInfo: "/medicina-ocupacional",
     whatsappMessage: "Hola Radiografias Digital a Domicilio, deseo información sobre radiografías ocupacionales para mi empresa.",
     icon: Briefcase,
@@ -51,7 +51,7 @@ const slides = [
   }
 ];
 
-const SLIDE_DURATION = 7000;
+const SLIDE_DURATION = 8000;
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

@@ -3,7 +3,7 @@ title: "Los Beneficios de la Radiografía Portátil en el Entorno Laboral"
 date: "2026-09-20"
 description: "Descubre cómo los servicios de rayos X a domicilio y en empresas están transformando la salud ocupacional, ahorrando tiempo y mejorando el diagnóstico."
 author: "Radiografia Portatil Piura"
-coverImage: "/images/blog/radiografia-portatil.jpg"
+coverImage: "/images/blog/medicina-ocupacional.jpg"
 ---
 
 La radiología digital portátil ha revolucionado la forma en que las empresas abordan la **salud ocupacional**. En el pasado, enviar a los empleados a una clínica u hospital para realizarse placas de tórax y otros estudios tomaba horas de la jornada laboral, generando tiempos muertos y riesgos de contagio en salas de espera.
