@@ -11,7 +11,7 @@ const slides = [
     id: 1,
     tag: "Servicio de Urgencias 24/7",
     title: "¿Tienes un familiar recién operado o con movilidad limitada?",
-    description: "Trasladar a un adulto mayor o a un familiar enfermo con movilidad limitada no solo es doloroso, sino que aumenta el riesgo de complicaciones. Llevamos el equipo de rayos X a tu casa en Piura para que no tengan que sufrir, dándote resultados rápidos y confiables.",
+    description: "Sabemos que trasladar a un adulto mayor enfermo o con movilidad limitada ,no solo es doloroso, sino que aumenta el riesgo de complicaciones. Llevamos el equipo de rayos X a tu casa en Piura, brindandote resultados rápidos y confiables.",
     ctaWhatsApp: "Pedir Radiografía a Domicilio",
     linkInfo: "/domicilio",
     whatsappMessage: "Hola Radiografias Digital a Domicilio, estuve revisando su página web y deseo cotizar una radiografía a domicilio.",
@@ -24,8 +24,8 @@ const slides = [
   {
     id: 2,
     tag: "Servicio para Clínicas",
-    title: "Soporte radiológico de precisión directo en el quirófano",
-    description: "Apoyo para clínicas locales. Llevamos el equipo portátil y a nuestro técnico justo cuando lo necesitas en sala de operaciones para traumatología y otras especialidades.",
+    title: "Apoyo radiológico de precisión en sala de operaciones",
+    description: "Apoyo para clínicas locales. Llevamos la radiología digital(DR) a tu sala de operaciones para traumatología y otras especialidades.",
     ctaWhatsApp: "Cotizar Quirófano",
     linkInfo: "/quirofano",
     whatsappMessage: "Hola Radiografias Digital a Domicilio, deseo cotizar el servicio de apoyo radiológico en quirófano.",
@@ -90,11 +90,11 @@ const HeroSection = () => {
 
           {/* Text Content */}
           <div className="w-full lg:w-1/2 flex flex-col justify-center min-h-[420px] lg:min-h-[460px]">
-            <div className="relative w-full">
-              <AnimatePresence mode="popLayout">
+            <div className="relative">
+              <AnimatePresence mode="wait">
                 <motion.div
                   key={currentSlide}
-                  className="flex flex-col items-start w-full"
+                  className="flex flex-col items-start"
                 >
                   <motion.div
                     initial={{ opacity: 0, y: 15 }}
@@ -110,7 +110,7 @@ const HeroSection = () => {
                     {slides[currentSlide].tag}
                   </motion.div>
 
-                  <motion.h1 
+                  <motion.h1
                     initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -15 }}
@@ -120,7 +120,7 @@ const HeroSection = () => {
                     {slides[currentSlide].title}
                   </motion.h1>
 
-                  <motion.p 
+                  <motion.p
                     initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -15 }}
@@ -130,7 +130,7 @@ const HeroSection = () => {
                     {slides[currentSlide].description}
                   </motion.p>
 
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -15 }}
@@ -198,53 +198,51 @@ const HeroSection = () => {
 
           {/* Visual Content (Right Side) */}
           <div className="w-full lg:w-1/2 relative hidden md:block group perspective">
-            <div className="relative w-full aspect-[4/3] max-w-[560px] mx-auto transition-transform duration-700 ease-out group-hover:-translate-y-2 z-10">
-              <AnimatePresence mode="popLayout">
-                <motion.div
-                  key={currentSlide}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 1.05 }}
-                  transition={{ duration: 0.8, ease: "easeInOut" }}
-                  className="absolute inset-0 w-full h-full"
-                >
-                  {/* Image and Background Container */}
-                  <div className="absolute inset-0 rounded-[2rem] overflow-hidden shadow-2xl transition-shadow duration-700 ease-out group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] z-0">
-                    {/* Ken Burns Effect Wrapper */}
-                    <motion.div
-                      initial={{ scale: 1 }}
-                      animate={{ scale: 1.05 }}
-                      transition={{ duration: SLIDE_DURATION / 1000, ease: "linear" }}
-                      className="absolute inset-0 w-full h-full"
-                    >
-                      <Image
-                        src={slides[currentSlide].image}
-                        alt={slides[currentSlide].title}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        priority
-                      />
-                    </motion.div>
-                    
-                    {/* Gradient Overlay */}
-                    <div className={`absolute inset-0 bg-gradient-to-tr ${slides[currentSlide].gradient} opacity-20 mix-blend-overlay transition-opacity duration-500 group-hover:opacity-10`}></div>
-                  </div>
-
-                  <div className="absolute inset-0 border-[4px] border-white/20 rounded-[2rem] z-10 pointer-events-none"></div>
-                  
-                  {/* Floating Icon Badge */}
-                  <motion.div 
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4, duration: 0.5, ease: "easeOut" }}
-                    className={`absolute -bottom-6 -left-6 w-24 h-24 rounded-2xl bg-gradient-to-tr ${slides[currentSlide].gradient} shadow-[0_10px_30px_rgba(0,0,0,0.2)] flex items-center justify-center text-white z-20 group-hover:scale-110 transition-transform duration-500`}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentSlide}
+                initial={{ opacity: 0, scale: 0.98 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 1.02 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="relative w-full aspect-[4/3] max-w-[560px] mx-auto transition-transform duration-700 ease-out group-hover:-translate-y-2 z-10"
+              >
+                {/* Image and Background Container */}
+                <div className="absolute inset-0 rounded-[2rem] overflow-hidden shadow-2xl transition-shadow duration-700 ease-out group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] z-0">
+                  {/* Ken Burns Effect Wrapper */}
+                  <motion.div
+                    initial={{ scale: 1 }}
+                    animate={{ scale: 1.05 }}
+                    transition={{ duration: SLIDE_DURATION / 1000, ease: "linear" }}
+                    className="absolute inset-0 w-full h-full"
                   >
-                    <CurrentIcon className="w-10 h-10" strokeWidth={2} />
+                    <Image
+                      src={slides[currentSlide].image}
+                      alt={slides[currentSlide].title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      priority
+                    />
                   </motion.div>
+
+                  {/* Gradient Overlay */}
+                  <div className={`absolute inset-0 bg-gradient-to-tr ${slides[currentSlide].gradient} opacity-20 mix-blend-overlay transition-opacity duration-500 group-hover:opacity-10`}></div>
+                </div>
+
+                <div className="absolute inset-0 border-[4px] border-white/20 rounded-[2rem] z-10 pointer-events-none"></div>
+
+                {/* Floating Icon Badge */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4, duration: 0.5, ease: "easeOut" }}
+                  className={`absolute -bottom-6 -left-6 w-24 h-24 rounded-2xl bg-gradient-to-tr ${slides[currentSlide].gradient} shadow-[0_10px_30px_rgba(0,0,0,0.2)] flex items-center justify-center text-white z-20 group-hover:scale-110 transition-transform duration-500`}
+                >
+                  <CurrentIcon className="w-10 h-10" strokeWidth={2} />
                 </motion.div>
-              </AnimatePresence>
-            </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
         </div>
       </div>
