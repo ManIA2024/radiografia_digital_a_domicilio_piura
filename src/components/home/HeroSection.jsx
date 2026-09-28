@@ -90,11 +90,11 @@ const HeroSection = () => {
 
           {/* Text Content */}
           <div className="w-full lg:w-1/2 flex flex-col justify-center min-h-[420px] lg:min-h-[460px]">
-            <div className="relative">
-              <AnimatePresence mode="wait">
+            <div className="relative w-full">
+              <AnimatePresence mode="popLayout">
                 <motion.div
                   key={currentSlide}
-                  className="flex flex-col items-start"
+                  className="flex flex-col items-start w-full"
                 >
                   <motion.div
                     initial={{ opacity: 0, y: 15 }}
@@ -198,51 +198,53 @@ const HeroSection = () => {
 
           {/* Visual Content (Right Side) */}
           <div className="w-full lg:w-1/2 relative hidden md:block group perspective">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentSlide}
-                initial={{ opacity: 0, scale: 0.98 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 1.02 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                className="relative w-full aspect-[4/3] max-w-[560px] mx-auto transition-transform duration-700 ease-out group-hover:-translate-y-2 z-10"
-              >
-                {/* Image and Background Container */}
-                <div className="absolute inset-0 rounded-[2rem] overflow-hidden shadow-2xl transition-shadow duration-700 ease-out group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] z-0">
-                  {/* Ken Burns Effect Wrapper */}
-                  <motion.div
-                    initial={{ scale: 1 }}
-                    animate={{ scale: 1.05 }}
-                    transition={{ duration: SLIDE_DURATION / 1000, ease: "linear" }}
-                    className="absolute inset-0 w-full h-full"
-                  >
-                    <Image
-                      src={slides[currentSlide].image}
-                      alt={slides[currentSlide].title}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      priority
-                    />
-                  </motion.div>
-                  
-                  {/* Gradient Overlay */}
-                  <div className={`absolute inset-0 bg-gradient-to-tr ${slides[currentSlide].gradient} opacity-20 mix-blend-overlay transition-opacity duration-500 group-hover:opacity-10`}></div>
-                </div>
-
-                <div className="absolute inset-0 border-[4px] border-white/20 rounded-[2rem] z-10 pointer-events-none"></div>
-                
-                {/* Floating Icon Badge */}
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4, duration: 0.5, ease: "easeOut" }}
-                  className={`absolute -bottom-6 -left-6 w-24 h-24 rounded-2xl bg-gradient-to-tr ${slides[currentSlide].gradient} shadow-[0_10px_30px_rgba(0,0,0,0.2)] flex items-center justify-center text-white z-20 group-hover:scale-110 transition-transform duration-500`}
+            <div className="relative w-full aspect-[4/3] max-w-[560px] mx-auto transition-transform duration-700 ease-out group-hover:-translate-y-2 z-10">
+              <AnimatePresence mode="popLayout">
+                <motion.div
+                  key={currentSlide}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 1.05 }}
+                  transition={{ duration: 0.8, ease: "easeInOut" }}
+                  className="absolute inset-0 w-full h-full"
                 >
-                  <CurrentIcon className="w-10 h-10" strokeWidth={2} />
+                  {/* Image and Background Container */}
+                  <div className="absolute inset-0 rounded-[2rem] overflow-hidden shadow-2xl transition-shadow duration-700 ease-out group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] z-0">
+                    {/* Ken Burns Effect Wrapper */}
+                    <motion.div
+                      initial={{ scale: 1 }}
+                      animate={{ scale: 1.05 }}
+                      transition={{ duration: SLIDE_DURATION / 1000, ease: "linear" }}
+                      className="absolute inset-0 w-full h-full"
+                    >
+                      <Image
+                        src={slides[currentSlide].image}
+                        alt={slides[currentSlide].title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        priority
+                      />
+                    </motion.div>
+                    
+                    {/* Gradient Overlay */}
+                    <div className={`absolute inset-0 bg-gradient-to-tr ${slides[currentSlide].gradient} opacity-20 mix-blend-overlay transition-opacity duration-500 group-hover:opacity-10`}></div>
+                  </div>
+
+                  <div className="absolute inset-0 border-[4px] border-white/20 rounded-[2rem] z-10 pointer-events-none"></div>
+                  
+                  {/* Floating Icon Badge */}
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4, duration: 0.5, ease: "easeOut" }}
+                    className={`absolute -bottom-6 -left-6 w-24 h-24 rounded-2xl bg-gradient-to-tr ${slides[currentSlide].gradient} shadow-[0_10px_30px_rgba(0,0,0,0.2)] flex items-center justify-center text-white z-20 group-hover:scale-110 transition-transform duration-500`}
+                  >
+                    <CurrentIcon className="w-10 h-10" strokeWidth={2} />
+                  </motion.div>
                 </motion.div>
-              </motion.div>
-            </AnimatePresence>
+              </AnimatePresence>
+            </div>
           </div>
         </div>
       </div>
