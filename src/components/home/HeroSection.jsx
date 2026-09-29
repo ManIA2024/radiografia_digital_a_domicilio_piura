@@ -11,7 +11,7 @@ const slides = [
     id: 1,
     tag: "Servicio de Urgencias 24/7",
     title: "Evita traslados dolorosos para tus seres queridos",
-    description: "Mover a un familiar postrado o recién operado hacia una clínica puede empeorar su estado. Llevamos nuestra unidad de Rayos X digital directamente a tu casa en Piura, entregando imágenes nítidas en minutos sin causarles sufrimiento.",
+    description: "Mover a un familiar postrado o recién operado hacia una clínica puede empeorar su estado. Llevamos nuestra unidad de Rayos X digital directamente a tu casa en Piura, entregando imágenes nítidas en minutos.",
     ctaWhatsApp: "Pedir Radiografía a Domicilio",
     linkInfo: "/domicilio",
     whatsappMessage: "Hola Radiografias Digital a Domicilio, estuve revisando su página web y deseo cotizar una radiografía a domicilio.",
