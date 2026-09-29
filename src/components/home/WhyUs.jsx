@@ -40,7 +40,7 @@ const WhyUs = () => {
                 </div>
                 <div>
                   <h4 className="font-heading font-semibold text-xl mb-1">Calidad Diagnóstica</h4>
-                  <p className="text-blue-100">Equipos con tecnoligia de Flat panel digital, con una resolución de imagen profesional.</p>
+                  <p className="text-blue-100">Equipos con tecnología de Flat panel digital, con una resolución de imagen profesional.</p>
                 </div>
               </div>
             </div>
