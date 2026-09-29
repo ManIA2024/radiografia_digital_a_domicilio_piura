@@ -197,15 +197,15 @@ const HeroSection = () => {
           </div>
 
           {/* Visual Content (Right Side) */}
-          <div className="w-full lg:w-1/2 relative hidden md:block group perspective">
+          <div className="w-full lg:w-1/2 relative group perspective mt-8 lg:mt-0">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
-                initial={{ opacity: 0, scale: 0.98 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 1.02 }}
+                exit={{ opacity: 0, scale: 1.05 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="relative w-full aspect-[4/3] max-w-[560px] mx-auto transition-transform duration-700 ease-out group-hover:-translate-y-2 z-10"
+                className="relative w-full aspect-[4/3] sm:aspect-video lg:aspect-[4/3] max-w-[560px] mx-auto transition-transform duration-700 ease-out group-hover:-translate-y-2 z-10"
               >
                 {/* Image and Background Container */}
                 <div className="absolute inset-0 rounded-[2rem] overflow-hidden shadow-2xl transition-shadow duration-700 ease-out group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] z-0">
