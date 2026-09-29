@@ -12,10 +12,10 @@ export const metadata = {
       'es': '/',
     },
   },
-  title: 'Radiografías Digitales a Domicilio - Rayos X Portátil en Piura',
+  title: 'Radiografías Digitales a Domicilio | Rayos X Portátil en Piura',
   description: 'Servicio de radiografía portátil a domicilio en Piura. Resultados de calidad diagnóstica en minutos sin mover al paciente.',
   openGraph: {
-    title: 'Radiografías Digitales a Domicilio',
+    title: 'Radiografías Digitales a Domicilio | Rayos X Portátil en Piura',
     description: 'Evita traslados dolorosos. Resultados en minutos, imágenes con calidad diagnóstica.',
     url: 'https://www.radiografiadigitalportatil.pe',
     siteName: 'Radiografia Portátil',
