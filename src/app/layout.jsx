@@ -4,6 +4,10 @@ import Footer from '../components/layout/Footer';
 import ContactWhatsapp from '../components/layout/ContactWhatsapp';
 
 export const metadata = {
+  metadataBase: new URL('https://www.radiografiadigitalportatil.pe'),
+  alternates: {
+    canonical: '/',
+  },
   title: 'Radiografías Digitales a Domicilio - Radiografía Portátil Piura',
   description: 'Servicio de radiografía portátil a domicilio en Piura. Resultados de calidad diagnóstica en minutos sin mover al paciente.',
   openGraph: {

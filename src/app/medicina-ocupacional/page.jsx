@@ -3,7 +3,7 @@ import { Briefcase, Clock, FileText, CheckCircle2, ShieldCheck } from 'lucide-re
 import FadeIn from '../../components/animations/FadeIn';
 
 export const metadata = {
-  title: 'Radiografía para Medicina Ocupacional en Piura | Evaluaciones in-company',
+  title: 'Radiografía para Medicina Ocupacional en Piura | Evaluaciones in-House',
   description: 'Exámenes radiológicos ocupacionales directo en tu empresa. Evita el ausentismo laboral con nuestras placas de tórax y lecturas OIT en Piura.',
   openGraph: {
     title: 'Radiografía Ocupacional | Evaluaciones en la Empresa',
@@ -46,7 +46,7 @@ export default function MedicinaOcupacionalPage() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "serviceType": "Radiología Ocupacional In-Company",
+    "serviceType": "Radiología Ocupacional In-House",
     "provider": {
       "@type": "MedicalBusiness",
       "name": "Radiografías Digitales a Domicilio - RadioPortátil"
@@ -84,10 +84,10 @@ export default function MedicinaOcupacionalPage() {
                 Realizamos campañas de rayos X in-company. Evita que tus colaboradores pierdan horas de trabajo en traslados a clínicas. Resultados digitales inmediatos para tu médico ocupacional.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="https://wa.me/51935248862?text=Hola%20Radiografias%20Digital%20Portatil,%20deseo%20cotizar%20una%20campa%C3%B1a%20de%20medicina%20ocupacional%20para%20mi%20empresa." 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href="https://wa.me/51935248862?text=Hola%20Radiografias%20Digital%20Portatil,%20deseo%20cotizar%20una%20campa%C3%B1a%20de%20medicina%20ocupacional%20para%20mi%20empresa."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors shadow-lg"
                 >
                   Cotizar Campaña por WhatsApp
