@@ -10,8 +10,8 @@ const slides = [
   {
     id: 1,
     tag: "Servicio de Urgencias 24/7",
-    title: "¿Tienes un familiar recién operado o con movilidad limitada?",
-    description: "Sabemos que trasladar a un adulto mayor enfermo o con movilidad limitada ,no solo es doloroso, sino que aumenta el riesgo de complicaciones. Llevamos el equipo de rayos X a tu casa en Piura, brindandote resultados rápidos y confiables.",
+    title: "Evita traslados dolorosos para tus seres queridos",
+    description: "Mover a un familiar postrado o recién operado hacia una clínica puede empeorar su estado. Llevamos nuestra unidad de Rayos X digital directamente a tu casa en Piura, entregando imágenes nítidas en minutos sin causarles sufrimiento.",
     ctaWhatsApp: "Pedir Radiografía a Domicilio",
     linkInfo: "/domicilio",
     whatsappMessage: "Hola Radiografias Digital a Domicilio, estuve revisando su página web y deseo cotizar una radiografía a domicilio.",
@@ -24,8 +24,8 @@ const slides = [
   {
     id: 2,
     tag: "Servicio para Clínicas",
-    title: "Apoyo radiológico de precisión en sala de operaciones",
-    description: "Apoyo para clínicas locales. Llevamos la radiología digital(DR) a tu sala de operaciones para traumatología y otras especialidades.",
+    title: "Imágenes intraoperatorias al instante",
+    description: "No retrases tus cirugías traumatológicas por falta de equipos. Te brindamos apoyo radiológico digital portátil directo en tu quirófano, asegurando precisión milimétrica en tiempo real.",
     ctaWhatsApp: "Cotizar Quirófano",
     linkInfo: "/quirofano",
     whatsappMessage: "Hola Radiografias Digital a Domicilio, deseo cotizar el servicio de apoyo radiológico en quirófano.",
@@ -38,8 +38,8 @@ const slides = [
   {
     id: 3,
     tag: "Salud Ocupacional",
-    title: "Radiografías In House para tus colaboradores",
-    description: "Chequeos médicos para tus colaboradores sin que tengan que salir de la empresa. Hacemos las placas ahí mismo para despistaje ocupacional y lectura OIT.",
+    title: "Cero ausentismo en exámenes ocupacionales",
+    description: "Que tus trabajadores no pierdan todo el día en clínicas. Instalamos nuestra unidad de Rayos X en tu empresa para realizar placas de tórax y lecturas OIT de forma masiva, rápida y sin afectar la producción.",
     ctaWhatsApp: "Solicitar In House",
     linkInfo: "/medicina-ocupacional",
     whatsappMessage: "Hola Radiografias Digital a Domicilio, deseo información sobre radiografías ocupacionales para mi empresa.",
