@@ -1,6 +1,8 @@
+"use client";
+
 import { Phone, Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,7 +12,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2">
               <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-xl">
                 R
               </div>
@@ -21,10 +23,10 @@ const Header = () => {
           </div>
 
           <nav className="hidden md:flex space-x-8">
-            <Link to="/" className="text-text-main hover:text-primary transition-colors font-medium">Inicio</Link>
-            <Link to="/domicilio" className="text-text-main hover:text-primary transition-colors font-medium">A Domicilio</Link>
-            <Link to="/quirofano" className="text-text-main hover:text-primary transition-colors font-medium">Para Quirófano</Link>
-            <Link to="/contacto" className="text-text-main hover:text-primary transition-colors font-medium">Contacto</Link>
+            <Link href="/" className="text-text-main hover:text-primary transition-colors font-medium">Inicio</Link>
+            <Link href="/domicilio" className="text-text-main hover:text-primary transition-colors font-medium">A Domicilio</Link>
+            <Link href="/quirofano" className="text-text-main hover:text-primary transition-colors font-medium">Para Quirófano</Link>
+            <Link href="/contacto" className="text-text-main hover:text-primary transition-colors font-medium">Contacto</Link>
           </nav>
 
           <div className="hidden md:flex items-center">
@@ -33,7 +35,7 @@ const Header = () => {
               className="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-lg hover:bg-primary-dark transition-colors shadow-sm font-medium"
             >
               <Phone className="w-5 h-5" />
-              <span>Ugencias 24/7</span>
+              <span>Urgencias 24/7</span>
             </a>
           </div>
 
@@ -59,10 +61,10 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-b border-gray-100">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link to="/" className="block px-3 py-2 rounded-md text-base font-medium text-text-main hover:text-primary hover:bg-gray-50" onClick={() => setIsMenuOpen(false)}>Inicio</Link>
-            <Link to="/domicilio" className="block px-3 py-2 rounded-md text-base font-medium text-text-main hover:text-primary hover:bg-gray-50" onClick={() => setIsMenuOpen(false)}>Servicio a Domicilio</Link>
-            <Link to="/quirofano" className="block px-3 py-2 rounded-md text-base font-medium text-text-main hover:text-primary hover:bg-gray-50" onClick={() => setIsMenuOpen(false)}>Para Quirófano</Link>
-            <Link to="/contacto" className="block px-3 py-2 rounded-md text-base font-medium text-text-main hover:text-primary hover:bg-gray-50" onClick={() => setIsMenuOpen(false)}>Contacto</Link>
+            <Link href="/" className="block px-3 py-2 rounded-md text-base font-medium text-text-main hover:text-primary hover:bg-gray-50" onClick={() => setIsMenuOpen(false)}>Inicio</Link>
+            <Link href="/domicilio" className="block px-3 py-2 rounded-md text-base font-medium text-text-main hover:text-primary hover:bg-gray-50" onClick={() => setIsMenuOpen(false)}>Servicio a Domicilio</Link>
+            <Link href="/quirofano" className="block px-3 py-2 rounded-md text-base font-medium text-text-main hover:text-primary hover:bg-gray-50" onClick={() => setIsMenuOpen(false)}>Para Quirófano</Link>
+            <Link href="/contacto" className="block px-3 py-2 rounded-md text-base font-medium text-text-main hover:text-primary hover:bg-gray-50" onClick={() => setIsMenuOpen(false)}>Contacto</Link>
           </div>
         </div>
       )}

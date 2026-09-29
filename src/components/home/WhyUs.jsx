@@ -7,10 +7,10 @@ const WhyUs = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6">
-              Tu salud no debería esperar en salas de emergencias.
+              Tu salud no debería esperar.
             </h2>
             <p className="text-lg text-blue-100 mb-8 font-sans">
-              Traemos el centro de imágenes directamente a tu sala. Olvídate del estrés del tráfico, las esperas interminables y la exposición a virus. Recibe tu diagnóstico de forma cómoda, con tecnología digital de punta avalada por especialistas.
+              Traemos el centro de imágenes directamente a tu casa. Olvídate del estrés del tráfico, las esperas interminables y la exposición a virus. Recibe tu diagnóstico de forma cómoda, con tecnología digital de punta avalada por especialistas.
             </p>
 
             <div className="space-y-6">
@@ -40,7 +40,7 @@ const WhyUs = () => {
                 </div>
                 <div>
                   <h4 className="font-heading font-semibold text-xl mb-1">Calidad Diagnóstica</h4>
-                  <p className="text-blue-100">Equipos con tecnología de Flat panel digital, con una resolución de imagen profesional.</p>
+                  <p className="text-blue-100">Equipos con tecnoligia de Flat panel digital, con una resolución de imagen profesional.</p>
                 </div>
               </div>
             </div>

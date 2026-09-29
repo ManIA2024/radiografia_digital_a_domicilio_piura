@@ -16,7 +16,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-gray-400 mb-6 font-sans">
-              Servicio de radiología digital portátil a domicilio en Piura. Calidad diagnóstica en la comodidad de tu hogar o clínica.
+              Servicio de radiología digital en Piura. Calidad diagnóstica en la comodidad de tu hogar o clínica.
             </p>
           </div>
 

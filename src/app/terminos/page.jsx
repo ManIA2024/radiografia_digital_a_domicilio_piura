@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const metadata = {
-  title: 'Términos de Servicio | Radiografía Portátil Piura',
+  title: 'Términos de Servicio | Radiografía Digital Portátil Piura',
   description: 'Términos y condiciones del servicio de radiografía digital portátil a domicilio en Piura, Perú.',
 };
 

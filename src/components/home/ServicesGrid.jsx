@@ -37,7 +37,7 @@ const ServicesGrid = () => {
       {
         "@type": "MedicalProcedure",
         "name": "Radiografía para Medicina Ocupacional",
-        "description": "Evaluaciones radiológicas in-company para empresas, lectura OIT y despistaje ocupacional.",
+        "description": "Evaluaciones radiológicas in-house para empresas, lectura OIT y despistaje ocupacional.",
         "procedureType": "DiagnosticProcedure"
       }
     ]
