@@ -7,6 +7,10 @@ export const metadata = {
   metadataBase: new URL('https://www.radiografiadigitalportatil.pe'),
   alternates: {
     canonical: '/',
+    languages: {
+      'es-PE': '/',
+      'es': '/',
+    },
   },
   title: 'Radiografías Digitales a Domicilio - Radiografía Portátil en Piura',
   description: 'Servicio de radiografía portátil a domicilio en Piura. Resultados de calidad diagnóstica en minutos sin mover al paciente.',
