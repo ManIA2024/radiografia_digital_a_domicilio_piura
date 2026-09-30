@@ -156,17 +156,8 @@ const CrearLinkForm = () => {
       </div>
 
       {/* Footer personalizado del servicio */}
-      <footer className="text-center text-sm text-slate-500 space-y-1">
-        <p>© 2026 Todos los derechos reservados —</p>
-        <p>
-          radiografiadigitalportatil.pe ·{' '}
-          <button
-            onClick={() => setShowModal(true)}
-            className="hover:text-slate-700 hover:underline transition-colors focus:outline-none"
-          >
-            Política de privacidad
-          </button>
-        </p>
+      <footer className="text-center text-sm text-slate-600 font-medium">
+        <p>Creamos Links para visualizar tus estudios en CD/DVD</p>
       </footer>
 
       {/* Modal Política de Privacidad */}
