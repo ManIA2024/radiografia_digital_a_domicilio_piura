@@ -1,4 +1,15 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
+
 const ContactWhatsapp = () => {
+  const pathname = usePathname();
+
+  // No renderizar en la ruta /crear_link
+  if (pathname === '/crear_link') {
+    return null;
+  }
+
   const phoneNumber = '51935248862';
   const defaultMessage = 'Hola Radiografias Digital a Domicilio, estuve revisando su página web y deseo cotizar.';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(defaultMessage)}`;
