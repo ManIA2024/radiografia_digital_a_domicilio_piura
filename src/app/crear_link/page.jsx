@@ -2,7 +2,7 @@ import React from 'react';
 import CrearLinkForm from '../../components/forms/CrearLinkForm';
 
 export const metadata = {
-  title: 'Crear Link | Radiografía Digital Portátil',
+  title: '¿Tienes tus estudios en CD, pero necesitas un link para visualizarlos?',
   description: 'Completa tus datos para solictar Creacion de Link por WhatsApp.',
 };
 
