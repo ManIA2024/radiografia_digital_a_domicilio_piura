@@ -15,7 +15,7 @@ const CrearLinkForm = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    
+
     // Validación DNI: Solo números y máximo 8 dígitos
     if (name === 'dni') {
       const onlyNums = value.replace(/[^0-9]/g, '');
@@ -24,7 +24,7 @@ const CrearLinkForm = () => {
       }
       return;
     }
-    
+
     // Validación Celular: Permite números, espacios y +, máximo 15 caracteres
     if (name === 'celular') {
       const formatted = value.replace(/[^0-9\s+]/g, '');
@@ -55,7 +55,7 @@ const CrearLinkForm = () => {
 *Tipo de Examen:* ${formData.tipoExamen}`;
 
       const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
-      
+
       // Abrir WhatsApp en una nueva pestaña
       window.open(url, '_blank');
       setIsSubmitting(false);
@@ -67,9 +67,9 @@ const CrearLinkForm = () => {
       {/* Decorative background elements */}
       <div className="absolute -top-10 -left-10 w-40 h-40 bg-[#116A5B] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
       <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-teal-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-      
+
       <div className="relative p-8 sm:p-10 bg-white/80 backdrop-blur-xl border border-white/50 rounded-[2rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] mb-8 transition-all hover:shadow-[0_30px_70px_-15px_rgba(17,106,91,0.15)] overflow-hidden group">
-        
+
         {/* Subtle shine effect */}
         <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000 ease-in-out pointer-events-none"></div>
 
@@ -84,7 +84,7 @@ const CrearLinkForm = () => {
 
         <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
           <div className="space-y-6">
-            
+
             {/* Nombre Completo */}
             <div className="relative">
               <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-slate-400">
@@ -102,8 +102,8 @@ const CrearLinkForm = () => {
                 className="peer w-full pl-12 pr-5 py-4 bg-white/50 border border-slate-200 rounded-2xl focus:bg-white focus:ring-4 focus:ring-[#116A5B]/10 focus:border-[#116A5B] outline-none transition-all text-slate-700 placeholder-transparent"
                 placeholder="Nombre Completo"
               />
-              <label 
-                htmlFor="nombreCompleto" 
+              <label
+                htmlFor="nombreCompleto"
                 className="absolute left-11 -top-2.5 bg-white/90 backdrop-blur-sm px-1.5 text-xs font-semibold text-[#116A5B] transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-placeholder-shown:top-4 peer-focus:-top-2.5 peer-focus:text-xs peer-focus:text-[#116A5B] rounded"
               >
                 Nombre Completo <span className="text-red-500">*</span>
@@ -111,7 +111,7 @@ const CrearLinkForm = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              
+
               {/* DNI */}
               <div>
                 <div className="relative">
@@ -132,8 +132,8 @@ const CrearLinkForm = () => {
                     className="peer w-full pl-12 pr-5 py-4 bg-white/50 border border-slate-200 rounded-2xl focus:bg-white focus:ring-4 focus:ring-[#116A5B]/10 focus:border-[#116A5B] outline-none transition-all text-slate-700 placeholder-transparent"
                     placeholder="DNI"
                   />
-                  <label 
-                    htmlFor="dni" 
+                  <label
+                    htmlFor="dni"
                     className="absolute left-11 -top-2.5 bg-white/90 backdrop-blur-sm px-1.5 text-xs font-semibold text-[#116A5B] transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-placeholder-shown:top-4 peer-focus:-top-2.5 peer-focus:text-xs peer-focus:text-[#116A5B] rounded"
                   >
                     DNI <span className="text-red-500">*</span>
@@ -160,8 +160,8 @@ const CrearLinkForm = () => {
                     className="peer w-full pl-12 pr-5 py-4 bg-white/50 border border-slate-200 rounded-2xl focus:bg-white focus:ring-4 focus:ring-[#116A5B]/10 focus:border-[#116A5B] outline-none transition-all text-slate-700 placeholder-transparent"
                     placeholder="Celular (WhatsApp)"
                   />
-                  <label 
-                    htmlFor="celular" 
+                  <label
+                    htmlFor="celular"
                     className="absolute left-11 -top-2.5 bg-white/90 backdrop-blur-sm px-1.5 text-xs font-semibold text-[#116A5B] transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-placeholder-shown:top-4 peer-focus:-top-2.5 peer-focus:text-xs peer-focus:text-[#116A5B] rounded"
                   >
                     Celular <span className="text-red-500">*</span>
@@ -188,8 +188,8 @@ const CrearLinkForm = () => {
                 className="peer w-full pl-12 pr-5 py-4 bg-white/50 border border-slate-200 rounded-2xl focus:bg-white focus:ring-4 focus:ring-[#116A5B]/10 focus:border-[#116A5B] outline-none transition-all text-slate-700 placeholder-transparent"
                 placeholder="Correo Electrónico"
               />
-              <label 
-                htmlFor="email" 
+              <label
+                htmlFor="email"
                 className="absolute left-11 -top-2.5 bg-white/90 backdrop-blur-sm px-1.5 text-xs font-semibold text-[#116A5B] transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-placeholder-shown:top-4 peer-focus:-top-2.5 peer-focus:text-xs peer-focus:text-[#116A5B] rounded"
               >
                 Correo Electrónico <span className="text-red-500">*</span>
@@ -251,12 +251,11 @@ const CrearLinkForm = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className={`group relative w-full bg-gradient-to-r from-[#116A5B] to-teal-600 hover:from-[#0e584b] hover:to-[#116A5B] text-white font-bold py-4 px-6 rounded-2xl transition-all duration-300 overflow-hidden flex items-center justify-center gap-3 mt-8 ${
-              isSubmitting ? 'opacity-90 cursor-wait' : 'transform hover:-translate-y-1 hover:shadow-[0_15px_30px_-10px_rgba(17,106,91,0.5)]'
-            }`}
+            className={`group relative w-full bg-gradient-to-r from-[#116A5B] to-teal-600 hover:from-[#0e584b] hover:to-[#116A5B] text-white font-bold py-4 px-6 rounded-2xl transition-all duration-300 overflow-hidden flex items-center justify-center gap-3 mt-8 ${isSubmitting ? 'opacity-90 cursor-wait' : 'transform hover:-translate-y-1 hover:shadow-[0_15px_30px_-10px_rgba(17,106,91,0.5)]'
+              }`}
           >
             <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out"></div>
-            
+
             {isSubmitting ? (
               <svg className="animate-spin -ml-1 mr-2 h-5 w-5 text-white relative z-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
@@ -271,6 +270,13 @@ const CrearLinkForm = () => {
               {isSubmitting ? 'Redirigiendo...' : 'Solicitar Link Seguro'}
             </span>
           </button>
+
+          <div className="mt-5 flex items-center justify-center text-xs text-slate-500 font-medium bg-slate-50/80 py-2.5 px-4 rounded-xl border border-slate-100">
+            <svg className="w-4 h-4 mr-2 text-[#116A5B]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Horario de atención: Lun - Vie 9am a 5pm | Sáb 9am a 12pm</span>
+          </div>
         </form>
       </div>
 
