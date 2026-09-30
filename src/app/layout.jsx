@@ -1,7 +1,6 @@
 import '../index.css';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
-import ContactWhatsapp from '../components/layout/ContactWhatsapp';
 
 export const metadata = {
   metadataBase: new URL('https://www.radiografiadigitalportatil.pe'),
@@ -71,7 +70,6 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />
-        <ContactWhatsapp />
       </body>
     </html>
   );
