@@ -156,7 +156,7 @@ const CrearLinkForm = () => {
       </div>
 
       {/* Footer personalizado del servicio */}
-      <footer className="text-center text-sm text-slate-600 font-medium">
+      <footer className="text-center text-sm text-slate-600 font-bold">
         <p>Creamos Links temporales para compartir tus estudios en CD, DVD o pendrive con tu doctor.</p>
       </footer>
 
