@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 
 const CrearLinkForm = () => {
+  const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     nombreCompleto: '',
     dni: '',
@@ -37,11 +38,12 @@ const CrearLinkForm = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto p-8 bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] mt-10 mb-10">
-      <h2 className="text-2xl font-bold text-slate-800 mb-2">Crear Link de Examen</h2>
-      <p className="text-slate-500 text-sm mb-8">Completa el formulario para enviarnos tus datos.</p>
+    <div className="max-w-md mx-auto mt-10 mb-10 px-4">
+      <div className="p-8 bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] mb-8">
+        <h2 className="text-2xl font-bold text-slate-800 mb-2">Crear Link de Examen</h2>
+        <p className="text-slate-500 text-sm mb-8">Completa el formulario para enviarnos tus datos.</p>
 
-      <form onSubmit={handleSubmit} className="space-y-5">
+        <form onSubmit={handleSubmit} className="space-y-5">
         <div>
           <label htmlFor="nombreCompleto" className="block text-sm font-medium text-slate-600 mb-1.5">Nombre Completo</label>
           <input
@@ -117,6 +119,30 @@ const CrearLinkForm = () => {
           </select>
         </div>
 
+        <div className="flex items-start mt-4">
+          <div className="flex items-center h-5">
+            <input
+              id="terms"
+              name="terms"
+              type="checkbox"
+              required
+              className="w-4 h-4 text-[#116A5B] bg-slate-50 border-slate-300 rounded focus:ring-[#116A5B] focus:ring-2 cursor-pointer"
+            />
+          </div>
+          <div className="ml-3 text-sm">
+            <label htmlFor="terms" className="font-medium text-slate-700 cursor-pointer">
+              He leído y acepto la{' '}
+              <button
+                type="button"
+                onClick={() => setShowModal(true)}
+                className="text-[#116A5B] hover:underline focus:outline-none"
+              >
+                Política de privacidad
+              </button>
+            </label>
+          </div>
+        </div>
+
         <button
           type="submit"
           className="w-full bg-[#116A5B] hover:bg-[#0e584b] text-white font-semibold py-3.5 px-4 rounded-xl transition-colors flex items-center justify-center gap-2 mt-8 shadow-sm"
@@ -127,6 +153,76 @@ const CrearLinkForm = () => {
           Enviar a WhatsApp
         </button>
       </form>
+      </div>
+
+      {/* Footer personalizado del servicio */}
+      <footer className="text-center text-sm text-slate-500 space-y-1">
+        <p>© 2026 Todos los derechos reservados —</p>
+        <p>
+          radiografiadigitalportatil.pe ·{' '}
+          <button 
+            onClick={() => setShowModal(true)} 
+            className="hover:text-slate-700 hover:underline transition-colors focus:outline-none"
+          >
+            Política de privacidad
+          </button>
+        </p>
+      </footer>
+
+      {/* Modal Política de Privacidad */}
+      {showModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm transition-opacity">
+          <div className="bg-white rounded-2xl shadow-xl max-w-lg w-full max-h-[80vh] overflow-y-auto p-6 relative">
+            <button
+              onClick={() => setShowModal(false)}
+              className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors focus:outline-none"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            
+            <h3 className="text-xl font-bold text-slate-800 mb-4">Política de privacidad</h3>
+            
+            <div className="text-sm text-slate-600 space-y-4">
+              <p><strong>Última actualización:</strong> 2026</p>
+              
+              <h4 className="font-semibold text-slate-700 mt-6">¿Qué datos guardamos?</h4>
+              <p>Para brindarte acceso a tu estudio médico, este portal almacena:</p>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Tu estudio de imágenes médicas (DICOM), asociado a tu historia clínica en el hospital.</li>
+                <li>Tu número de documento de identidad, usado únicamente para verificar que sos vos quien accede.</li>
+                <li>Un código de acceso temporal generado por el personal del hospital.</li>
+                <li>Registros técnicos básicos (fecha de acceso, dirección IP) por motivos de seguridad.</li>
+              </ul>
+
+              <h4 className="font-semibold text-slate-700 mt-6">¿Para qué usamos estos datos?</h4>
+              <p>Exclusivamente para permitirte visualizar tu propio estudio médico de forma segura, sin necesidad de retirar un CD físico. No usamos tus datos con fines comerciales, publicitarios, ni los compartimos con terceros ajenos al hospital.</p>
+
+              <h4 className="font-semibold text-slate-700 mt-6">¿Cuánto tiempo se conservan?</h4>
+              <p>El acceso a tu estudio vence automáticamente a los días indicados al momento de entregarte el código (normalmente 30 días). Una vez vencido, el estudio se elimina de este portal de forma automática. Esto no afecta la conservación de tu historia clínica, que el hospital mantiene según la normativa vigente.</p>
+
+              <h4 className="font-semibold text-slate-700 mt-6">¿Con quién se comparte la información?</h4>
+              <p>Tus datos no se comparten con terceros. Únicamente el personal autorizado del hospital puede generar accesos a estudios, y vos accedés a tu propio estudio mediante el código y tu documento de identidad.</p>
+
+              <h4 className="font-semibold text-slate-700 mt-6">Tus derechos</h4>
+              <p>De acuerdo con la Ley de Protección de Datos Personales del Perú (Ley N° 29733), podés solicitar en cualquier momento: acceso a tus datos, rectificación, cancelación u oposición a su tratamiento, contactando directamente al hospital.</p>
+
+              <h4 className="font-semibold text-slate-700 mt-6">Contacto</h4>
+              <p>Ante cualquier consulta sobre tus datos o este portal, podés escribirnos por WhatsApp desde el botón disponible en la página principal.</p>
+            </div>
+            
+            <div className="mt-8 flex justify-end">
+              <button
+                onClick={() => setShowModal(false)}
+                className="bg-[#116A5B] hover:bg-[#0e584b] text-white px-6 py-2 rounded-xl transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#116A5B]"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
