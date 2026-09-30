@@ -4,15 +4,14 @@ const ContactWhatsapp = () => {
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(defaultMessage)}`;
 
   return (
-    <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[9999] group">
+    <div className="fixed bottom-24 right-6 md:bottom-8 md:right-8 z-[9999] group">
       <a
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="relative flex items-center justify-center p-4 bg-[#25D366] text-white rounded-full shadow-lg hover:bg-[#1EBE5D] hover:shadow-2xl transition-all hover:-translate-y-1"
+        className="relative flex items-center justify-center p-4 bg-[#25D366] text-white rounded-full shadow-lg hover:bg-[#1EBE5D] hover:shadow-2xl active:scale-95 transition-all"
         aria-label="Contactar por WhatsApp"
       >
-        <div className="absolute inset-0 rounded-full border-2 border-[#25D366] animate-ping opacity-75"></div>
 
         {/* SVG of Official WhatsApp Logo */}
         <svg
