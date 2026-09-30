@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import { User, CreditCard, Phone, Mail, FileText } from 'lucide-react';
+import React, { useState } from 'react';
 
 const CrearLinkForm = () => {
   const [showModal, setShowModal] = useState(false);
@@ -15,25 +14,6 @@ const CrearLinkForm = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    
-    // Validación para DNI (sólo números, max 8)
-    if (name === 'dni') {
-      const onlyNums = value.replace(/[^0-9]/g, '');
-      if (onlyNums.length <= 8) {
-        setFormData(prevState => ({ ...prevState, [name]: onlyNums }));
-      }
-      return;
-    }
-
-    // Validación para Celular (sólo números, max 9)
-    if (name === 'celular') {
-      const onlyNums = value.replace(/[^0-9]/g, '');
-      if (onlyNums.length <= 9) {
-        setFormData(prevState => ({ ...prevState, [name]: onlyNums }));
-      }
-      return;
-    }
-
     setFormData(prevState => ({
       ...prevState,
       [name]: value
@@ -57,27 +37,6 @@ const CrearLinkForm = () => {
     window.open(url, '_blank');
   };
 
-  // Accesibilidad del Modal: Bloquear scroll y permitir cerrar con ESC
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape' && showModal) {
-        setShowModal(false);
-      }
-    };
-
-    if (showModal) {
-      document.body.style.overflow = 'hidden';
-      window.addEventListener('keydown', handleKeyDown);
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-
-    return () => {
-      document.body.style.overflow = 'unset';
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [showModal]);
-
   return (
     <div className="max-w-md mx-auto mt-10 mb-10 px-4">
       <div className="p-8 bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] mb-8">
@@ -86,125 +45,78 @@ const CrearLinkForm = () => {
 
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label htmlFor="nombreCompleto" className="block text-sm font-medium text-slate-600 mb-1.5">
-              Nombre Completo <span className="text-red-500">*</span>
-            </label>
-            <div className="relative">
-              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
-                <User size={18} />
-              </div>
-              <input
-                type="text"
-                id="nombreCompleto"
-                name="nombreCompleto"
-                value={formData.nombreCompleto}
-                onChange={handleChange}
-                required
-                maxLength={60}
-                className="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#116A5B]/20 focus:border-[#116A5B] outline-none transition-all text-slate-700"
-                placeholder="Ej: Juan Pérez"
-              />
-            </div>
+            <label htmlFor="nombreCompleto" className="block text-sm font-medium text-slate-600 mb-1.5">Nombre Completo</label>
+            <input
+              type="text"
+              id="nombreCompleto"
+              name="nombreCompleto"
+              value={formData.nombreCompleto}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#116A5B]/20 focus:border-[#116A5B] outline-none transition-all text-slate-700"
+              placeholder="Ej: Juan Pérez"
+            />
           </div>
 
           <div>
-            <label htmlFor="dni" className="block text-sm font-medium text-slate-600 mb-1.5">
-              DNI <span className="text-red-500">*</span>
-            </label>
-            <div className="relative">
-              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
-                <CreditCard size={18} />
-              </div>
-              <input
-                type="text"
-                id="dni"
-                name="dni"
-                value={formData.dni}
-                onChange={handleChange}
-                required
-                minLength={8}
-                maxLength={8}
-                className="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#116A5B]/20 focus:border-[#116A5B] outline-none transition-all text-slate-700"
-                placeholder="Ej: 12345678"
-              />
-            </div>
+            <label htmlFor="dni" className="block text-sm font-medium text-slate-600 mb-1.5">DNI</label>
+            <input
+              type="text"
+              id="dni"
+              name="dni"
+              value={formData.dni}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#116A5B]/20 focus:border-[#116A5B] outline-none transition-all text-slate-700"
+              placeholder="Ej: 12345678"
+            />
           </div>
 
           <div>
-            <label htmlFor="celular" className="block text-sm font-medium text-slate-600 mb-1.5">
-              Número de Celular (WhatsApp) <span className="text-red-500">*</span>
-            </label>
-            <div className="relative">
-              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
-                <Phone size={18} />
-              </div>
-              <input
-                type="tel"
-                id="celular"
-                name="celular"
-                value={formData.celular}
-                onChange={handleChange}
-                required
-                minLength={9}
-                maxLength={9}
-                className="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#116A5B]/20 focus:border-[#116A5B] outline-none transition-all text-slate-700"
-                placeholder="Ej: 999999999"
-              />
-            </div>
+            <label htmlFor="celular" className="block text-sm font-medium text-slate-600 mb-1.5">Número de Celular (WhatsApp)</label>
+            <input
+              type="tel"
+              id="celular"
+              name="celular"
+              value={formData.celular}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#116A5B]/20 focus:border-[#116A5B] outline-none transition-all text-slate-700"
+              placeholder="Ej: 999 999 999"
+            />
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-slate-600 mb-1.5">
-              Correo Electrónico <span className="text-red-500">*</span>
-            </label>
-            <div className="relative">
-              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
-                <Mail size={18} />
-              </div>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                maxLength={80}
-                className="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#116A5B]/20 focus:border-[#116A5B] outline-none transition-all text-slate-700"
-                placeholder="Ej: correo@ejemplo.com"
-              />
-            </div>
+            <label htmlFor="email" className="block text-sm font-medium text-slate-600 mb-1.5">Correo Electrónico</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#116A5B]/20 focus:border-[#116A5B] outline-none transition-all text-slate-700"
+              placeholder="Ej: correo@ejemplo.com"
+            />
           </div>
 
           <div>
-            <label htmlFor="tipoExamen" className="block text-sm font-medium text-slate-600 mb-1.5">
-              Tipo de Examen <span className="text-red-500">*</span>
-            </label>
-            <div className="relative">
-              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
-                <FileText size={18} />
-              </div>
-              <select
-                id="tipoExamen"
-                name="tipoExamen"
-                value={formData.tipoExamen}
-                onChange={handleChange}
-                required
-                className="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#116A5B]/20 focus:border-[#116A5B] outline-none transition-all text-slate-700 appearance-none"
-              >
-                <option value="" disabled>Seleccione un examen</option>
-                <option value="Radiografía">Radiografía Digital</option>
-                <option value="Resonancia Magnetica (RM)">Resonancia Magnética Nuclear (RMN)</option>
-                <option value="Tomografía (TAC)">Tomografía Espiral Multicorte (TEM)</option>
-                <option value="Mamografía">Mamografía Digital</option>
-                <option value="Otros">Otros</option>
-              </select>
-              {/* Ícono de flecha para el select */}
-              <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none text-slate-400">
-                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-            </div>
+            <label htmlFor="tipoExamen" className="block text-sm font-medium text-slate-600 mb-1.5">Tipo de Examen</label>
+            <select
+              id="tipoExamen"
+              name="tipoExamen"
+              value={formData.tipoExamen}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#116A5B]/20 focus:border-[#116A5B] outline-none transition-all text-slate-700 appearance-none"
+            >
+              <option value="" disabled>Seleccione un examen</option>
+              <option value="Radiografía">Radiografía Digital</option>
+              <option value="Resonancia Magnetica (RM)">Resonancia Magnética Nuclear (RMN)</option>
+              <option value="Tomografía (TAC)">Tomografía Espiral Multicorte (TEM)</option>
+              <option value="Mamografía">Mamografía Digital</option>
+              <option value="Otros">Otros</option>
+            </select>
           </div>
 
           <div className="flex items-start mt-4">
@@ -227,7 +139,6 @@ const CrearLinkForm = () => {
                 >
                   Política de privacidad
                 </button>
-                <span className="text-red-500"> *</span>
               </label>
             </div>
           </div>
