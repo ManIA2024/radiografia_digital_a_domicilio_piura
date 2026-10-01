@@ -23,6 +23,8 @@ const ContactWhatsapp = () => {
         className="relative flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-[#25D366] text-white rounded-full shadow-lg hover:bg-[#1EBE5D] hover:shadow-2xl active:scale-95 transition-all"
         aria-label="Contactar por WhatsApp"
       >
+        {/* Efecto de latido (ping) que no bloquea clicks */}
+        <div className="absolute inset-0 rounded-full border-2 border-[#25D366] animate-ping opacity-75 pointer-events-none"></div>
 
         {/* Official WhatsApp Logo from CDN to bypass mobile inline SVG bugs */}
         <img 
